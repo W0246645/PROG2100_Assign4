@@ -11,6 +11,8 @@
 #include "Organism.h"
 #include "City.h"
 #include "GameSpecs.h"
+#include "Human.h"
+#include "Zombie.h"
 
 using namespace std;
 
@@ -21,7 +23,7 @@ void ClearScreen()
 
 int main() {
     City *city = new City();
-    chrono:: milliseconds interval(INTERVAL);
+    chrono:: seconds interval(PAUSE_SECONDS);
 
     while (city->hasDiversity()) { //while both humans and zombies exist
         this_thread::sleep_for(interval);

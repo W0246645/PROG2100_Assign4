@@ -8,9 +8,9 @@ class Zombie : public Organism
 {
 public:
 	Zombie();
-	Zombie( City *city, int width, int height );
-	virtual ~zombie();
+	virtual ~Zombie();
 
+    void setTargets();
 	void move();
 };
 

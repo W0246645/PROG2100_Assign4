@@ -2,6 +2,7 @@
 #define _Organism_H
 
 #include <iostream>
+#include <vector>
 #include "GameSpecs.h"
 
 using namespace std;
@@ -16,7 +17,8 @@ protected:
 	int width;
 	int height;
 	bool moved;
-    char type;
+    char species;
+    vector<int> targets;
 	City *city;
 
 	enum { WEST, NORTH, EAST, SOUTH, NUM_DIRECTIONS };
@@ -30,6 +32,8 @@ public:
 	//virtual void spawn() = 0;
 	//virtual int getSpecies() = 0; //this could also be coded concrete here
 	//virtual void getPosition() = 0;
+
+    virtual void setTargets() = 0;
 
 	void setPosition( int x, int y );
 	void endTurn();

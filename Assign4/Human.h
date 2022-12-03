@@ -7,11 +7,11 @@
 class Human : public Organism
 {
 public:
-	Human(); 
-	Human( City *city, int width, int height );
+	Human();
 	virtual ~Human();
 
 	void move();
+    void setTargets();
 };
 
 #endif
