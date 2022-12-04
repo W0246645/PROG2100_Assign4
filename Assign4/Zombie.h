@@ -8,6 +8,7 @@ class Zombie : public Organism
 {
 public:
 	Zombie();
+    Zombie( City *city, int width, int height );
 	virtual ~Zombie();
 
     void setTargets();

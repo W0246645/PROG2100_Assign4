@@ -21,6 +21,7 @@ public:
 	void setOrganism( Organism *organism, int x, int y );
 
 	void move();
+    void reset();
 
 	friend ostream& operator<<( ostream &output, City &city );
 

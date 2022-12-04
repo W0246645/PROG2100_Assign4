@@ -8,6 +8,7 @@ class Human : public Organism
 {
 public:
 	Human();
+    Human( City *city, int width, int height );
 	virtual ~Human();
 
 	void move();

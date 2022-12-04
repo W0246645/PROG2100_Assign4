@@ -4,10 +4,9 @@
 #include <iostream>
 #include <vector>
 #include "GameSpecs.h"
+#include "City.h"
 
 using namespace std;
-
-class City;
 
 class Organism
 {
@@ -37,7 +36,9 @@ public:
 
 	void setPosition( int x, int y );
 	void endTurn();
+    void reset();
 	bool isTurn();
+    char getSpecies();
 
 	friend ostream& operator<<( ostream &output, Organism *organism );
 };
