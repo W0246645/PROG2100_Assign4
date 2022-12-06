@@ -33,6 +33,7 @@ City::City() {
         }
     }
 
+    //flip i and j on x and y since for i and for j is rows then columns but x comes first which is columns.
     for (int i = 0; i < GRIDSIZE; ++i) {
         for (int j = 0; j < GRIDSIZE; ++j) {
             if (count(humanPositions.begin(), humanPositions.end(), (i * GRIDSIZE) + j)) {
@@ -53,10 +54,12 @@ City::City() {
 
 City::~City() = default;
 
+//flip i and j on x and y since for i and for j is rows then columns but x comes first which is columns.
 Organism *City::getOrganism(int x, int y) {
     return this->grid[y][x];
 }
 
+//flip i and j on x and y since for i and for j is rows then columns but x comes first which is columns.
 void City::setOrganism(Organism *organism, int x, int y) {
     this->grid[y][x] = organism;
 }

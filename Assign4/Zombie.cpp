@@ -35,6 +35,7 @@ void Zombie::move() {
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> dis(0, this->targets.size() - 1);
         int pos = dis(gen);
+        //1 is NW, 2 is N, 3 is NE, 4 is E, etc etc.
         switch (this->targets[pos]) {
             case 1:
                 this->city->setOrganism(nullptr, this->x, this->y);
@@ -91,6 +92,7 @@ void Zombie::move() {
             std::mt19937 gen(rd());
             std::uniform_int_distribution<> dis(0, this->targets.size() - 1);
             int pos = dis(gen);
+            //1 is NW, 2 is N, 3 is NE, 4 is E, etc etc.
             switch (this->targets[pos]) {
                 case 1:
                     this->city->setOrganism((new Zombie(this->city, GRIDSIZE, GRIDSIZE)), this->x-1, this->y-1);
@@ -151,6 +153,10 @@ void Zombie::move() {
     this->moved = true;
 }
 
+//Will push an approved position to the target vector. 1 is NW, 2 is N, 3 is NE, 4 is E, etc etc.
+//Makes sure that the possible position is not going to push it off the edge of the grid and that it's null.
+//If it finds a human in an acceptable position it'll remove any of the nullptr positions in the target vector
+//and only look for humans after one human is found.
 void Zombie::setTargets() {
     if (this->x != 0 && this->y != 0) {
         if (this->city->getOrganism(this->x - 1, this->y - 1) != nullptr) {
@@ -274,6 +280,8 @@ void Zombie::setTargets() {
     }
 }
 
+//Will push an approved position to the target vector. 1 is NW, 2 is N, 3 is NE, 4 is E, etc etc.
+//Makes sure that the possible position is not going to push it off the edge of the grid and that it's a human.
 void Zombie::breedTargets() {
     if (this->x != 0 && this->y != 0) {
         if (this->city->getOrganism(this->x - 1, this->y - 1) != nullptr && this->city->getOrganism(this->x - 1, this->y - 1)->getSpecies() == 'H') {

@@ -26,6 +26,7 @@ void Human::move() {
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> dis(0, this->targets.size() - 1);
         int pos = dis(gen);
+        //1 is NW, 2 is N, 3 is NE, 4 is E, etc etc.
         switch (this->targets[pos]) {
             case 2:
                 this->city->setOrganism(nullptr, this->x, this->y);
@@ -57,6 +58,7 @@ void Human::move() {
             std::mt19937 gen(rd());
             std::uniform_int_distribution<> dis(0, this->targets.size() - 1);
             int pos = dis(gen);
+            //1 is NW, 2 is N, 3 is NE, 4 is E, etc etc.
             switch (this->targets[pos]) {
                 case 2:
                     this->city->setOrganism((new Human(this->city, GRIDSIZE, GRIDSIZE)), this->x, this->y-1);
@@ -84,6 +86,8 @@ void Human::move() {
     this->moved = true;
 }
 
+//Will push an approved position to the target vector. 1 is NW, 2 is N, 3 is NE, 4 is E, etc etc.
+//Makes sure that the possible position is not going to push it off the edge of the grid and that it's null.
 void Human::setTargets() {
     if (this->y != 0 && this->city->getOrganism(this->x, this->y - 1) == nullptr) {
         this->targets.push_back(2);
@@ -99,6 +103,8 @@ void Human::setTargets() {
     }
 }
 
+//Will push an approved position to the target vector. 1 is NW, 2 is N, 3 is NE, 4 is E, etc etc.
+//Makes sure that the possible position is not going to push it off the edge of the grid and that it's null.
 void Human::recruitTargets() {
     if (this->y != 0) {
         if (this->city->getOrganism(this->x, this->y - 1) == nullptr) {

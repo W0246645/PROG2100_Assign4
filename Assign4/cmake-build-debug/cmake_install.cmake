@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/NSCCITProjects/PROG2100_Assign4/Assign4
+# Install script for directory: X:/C++ (PROG 2100)/PROG2100_Assign4/Assign4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2021.3.2/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Documents/NSCCITProjects/PROG2100_Assign4/Assign4/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "X:/C++ (PROG 2100)/PROG2100_Assign4/Assign4/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
