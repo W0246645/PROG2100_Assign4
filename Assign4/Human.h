@@ -13,6 +13,7 @@ public:
 
 	void move();
     void setTargets();
+    void recruitTargets();
 };
 
 #endif

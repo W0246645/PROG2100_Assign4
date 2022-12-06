@@ -12,6 +12,9 @@ class City
 {
 protected:
 	Organism *grid[GRIDSIZE][GRIDSIZE];
+    int generation;
+    int numHumans;
+    int numZombies;
 
 public:
 	City();
@@ -22,6 +25,11 @@ public:
 
 	void move();
     void reset();
+    bool hasDiversity();
+    void lessZombie();
+    void lessHuman();
+    void moreHuman();
+    void moreZombie();
 
 	friend ostream& operator<<( ostream &output, City &city );
 

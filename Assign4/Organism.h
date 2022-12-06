@@ -16,6 +16,7 @@ protected:
 	int width;
 	int height;
 	bool moved;
+    int steps;
     char species;
     vector<int> targets;
 	City *city;

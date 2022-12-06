@@ -68,6 +68,38 @@ build CMakeFiles/Assign4.dir/main.cpp.obj: CXX_COMPILER__Assign4_Debug D$:/Docum
   TARGET_COMPILE_PDB = CMakeFiles\Assign4.dir\
   TARGET_PDB = Assign4.pdb
 
+build CMakeFiles/Assign4.dir/Organism.cpp.obj: CXX_COMPILER__Assign4_Debug D$:/Documents/NSCCITProjects/PROG2100_Assign4/Assign4/Organism.cpp || cmake_object_order_depends_target_Assign4
+  DEP_FILE = CMakeFiles\Assign4.dir\Organism.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\Assign4.dir
+  OBJECT_FILE_DIR = CMakeFiles\Assign4.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Assign4.dir\
+  TARGET_PDB = Assign4.pdb
+
+build CMakeFiles/Assign4.dir/City.cpp.obj: CXX_COMPILER__Assign4_Debug D$:/Documents/NSCCITProjects/PROG2100_Assign4/Assign4/City.cpp || cmake_object_order_depends_target_Assign4
+  DEP_FILE = CMakeFiles\Assign4.dir\City.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\Assign4.dir
+  OBJECT_FILE_DIR = CMakeFiles\Assign4.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Assign4.dir\
+  TARGET_PDB = Assign4.pdb
+
+build CMakeFiles/Assign4.dir/Human.cpp.obj: CXX_COMPILER__Assign4_Debug D$:/Documents/NSCCITProjects/PROG2100_Assign4/Assign4/Human.cpp || cmake_object_order_depends_target_Assign4
+  DEP_FILE = CMakeFiles\Assign4.dir\Human.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\Assign4.dir
+  OBJECT_FILE_DIR = CMakeFiles\Assign4.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Assign4.dir\
+  TARGET_PDB = Assign4.pdb
+
+build CMakeFiles/Assign4.dir/Zombie.cpp.obj: CXX_COMPILER__Assign4_Debug D$:/Documents/NSCCITProjects/PROG2100_Assign4/Assign4/Zombie.cpp || cmake_object_order_depends_target_Assign4
+  DEP_FILE = CMakeFiles\Assign4.dir\Zombie.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\Assign4.dir
+  OBJECT_FILE_DIR = CMakeFiles\Assign4.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Assign4.dir\
+  TARGET_PDB = Assign4.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Assign4
@@ -76,7 +108,7 @@ build CMakeFiles/Assign4.dir/main.cpp.obj: CXX_COMPILER__Assign4_Debug D$:/Docum
 #############################################
 # Link the executable Assign4.exe
 
-build Assign4.exe: CXX_EXECUTABLE_LINKER__Assign4_Debug CMakeFiles/Assign4.dir/main.cpp.obj
+build Assign4.exe: CXX_EXECUTABLE_LINKER__Assign4_Debug CMakeFiles/Assign4.dir/main.cpp.obj CMakeFiles/Assign4.dir/Organism.cpp.obj CMakeFiles/Assign4.dir/City.cpp.obj CMakeFiles/Assign4.dir/Human.cpp.obj CMakeFiles/Assign4.dir/Zombie.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Assign4.dir

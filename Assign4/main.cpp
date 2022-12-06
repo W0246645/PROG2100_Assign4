@@ -25,8 +25,7 @@ int main() {
     City *city = new City();
     chrono:: seconds interval(PAUSE_SECONDS);
 
-    //while (city->hasDiversity()) { //while both humans and zombies exist
-    while (true) { //while both humans and zombies exist
+    while (city->hasDiversity()) { //while both humans and zombies exist
         this_thread::sleep_for(interval);
         ClearScreen();
         city->move(); //includes all actions

@@ -6,6 +6,9 @@
 
 class Zombie : public Organism
 {
+protected:
+    bool humanFound;
+    int stepsSinceFood;
 public:
 	Zombie();
     Zombie( City *city, int width, int height );
@@ -13,6 +16,7 @@ public:
 
     void setTargets();
 	void move();
+    void breedTargets();
 };
 
 #endif
