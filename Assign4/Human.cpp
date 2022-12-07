@@ -51,7 +51,7 @@ void Human::move() {
         }
     }
     this->targets.clear();
-    if (this->steps == 3) {
+    if (this->steps == HUMAN_BREED) {
         this->recruitTargets();
         if (!this->targets.empty()) {
             std::random_device rd;

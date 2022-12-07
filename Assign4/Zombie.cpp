@@ -85,7 +85,7 @@ void Zombie::move() {
     }
     this->targets.clear();
 
-    if (this->steps == 8) {
+    if (this->steps == ZOMBIE_BREED) {
         this->breedTargets();
         if (!this->targets.empty()) {
             std::random_device rd;
@@ -136,7 +136,7 @@ void Zombie::move() {
     }
     this->steps += 1;
     this->targets.clear();
-    if (this->stepsSinceFood == 3 && !this->humanFound) {
+    if (this->stepsSinceFood == ZOMBIE_STARVE && !this->humanFound) {
         this->city->lessZombie();
         this->city->moreHuman();
         int x = this->x;
